@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Accessible Website Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">
+    Skip to main content
+  </a>
+
+  <!-- Header / Banner -->
+  <header>
+    <h1>My Accessible Website</h1>
+
+    <!-- Main navigation -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="main-content">
+
+    <!-- Section -->
+    <section>
+      <h2>About this page</h2>
+      <p>
+        This page demonstrates a simple, accessible HTML structure
+        using semantic elements and ARIA landmarks.
+      </p>
+    </section>
+
+    <!-- Section with form -->
+    <section>
+      <h2>Contact form</h2>
+      <p>
+        Please fill out the form below to get in touch with us.
+      </p>
+
+      <!-- Form -->
+      <form action="#" method="post">
+
+        <!-- Text input -->
+        <div>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <!-- Email input -->
+        <div>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            aria-describedby="email-help"
+          />
+          <p id="email-help">
+            We will only use your email address to reply to your message.
+          </p>
+        </div>
+
+        <!-- Radio buttons -->
+        <fieldset>
+          <legend>Reason for contact</legend>
+
+          <div>
+            <input type="radio" id="support" name="reason" value="support" />
+            <label for="support">Support</label>
+          </div>
+
+          <div>
+            <input type="radio" id="sales" name="reason" value="sales" />
+            <label for="sales">Sales</label>
+          </div>
+        </fieldset>
+
+        <!-- Checkbox -->
+        <div>
+          <input type="checkbox" id="newsletter" name="newsletter" />
+          <label for="newsletter">
+            I want to receive the newsletter
+          </label>
+        </div>
+
+        <!-- Select -->
+        <div>
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="">Select a country</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="es">Spain</option>
+          </select>
+        </div>
+
+        <!-- Submit button -->
+        <div>
+          <button type="submit">
+            Submit form
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Complementary content -->
+  <aside>
+    <h2>Additional information</h2>
+    <p>
+      Customer support hours: Monday to Friday, 9 AM to 6 PM.
+    </p>
+  </aside>
+
+  <!-- Footer / Contentinfo -->
+  <footer>
+    <p>&copy; 2026 My Accessible Website</p>
+
+    <nav aria-label="Legal navigation">
+      <ul>
+        <li><a href="/privacy">Privacy policy</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
