@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Accessible Website Example</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <script src="js/script.js" defer></script>
+
+  <title>Accessible Study Guide for AD0-E128</title>
 </head>
 
 <body>
@@ -13,132 +18,542 @@
     Skip to main content
   </a>
 
-  <!-- Header / Banner -->
-  <header>
-    <h1>My Accessible Website</h1>
-
-    <!-- Main navigation -->
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="header" id="decorative-image">
+    <img src="https://images.unsplash.com/photo-1658604663578-04634f4cb897?q=80&w=1740&auto=format&fit=crop"
+       alt=""
+       role="presentation"
+       class="header__decorative-image">
+    <h1 class="header__title">Accessible Study Guide for AD0-E128 Using NotebookLM</h1>
+    <p class="header__tagline">Learn how to prepare for the AD0-E128 exam while exploring real-world web accessibility</p>
+    <p class="header__author">By Lidia Nokonoko</p>
   </header>
 
+  <!-- Main navigation -->
+  <nav aria-label="Main navigation" class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a class="nav__link" href="#purpose">Purpose</a></li>
+      <li class="nav__item"><a class="nav__link" href="#notebooklm">NotebookLM</a></li>
+      <li class="nav__item"><a class="nav__link" href="#workflow">Workflow</a></li>
+      <li class="nav__item"><a class="nav__link" href="#components">Components</a></li>
+    </ul>
+  </nav>
+
   <!-- Main content -->
-  <main id="main-content">
+  <main class="main">
 
-    <!-- Section -->
-    <section>
-      <h2>About this page</h2>
-      <p>
-        This page demonstrates a simple, accessible HTML structure
-        using semantic elements and ARIA landmarks.
-      </p>
-    </section>
+      <div id="main-content" class="main__content">
+        <!-- Section 1: Purpose -->
+       <section class="section" id="purpose">
+          <h2 class="section__title">Purpose of This Website</h2>
+           <div class="section__intro">
+               <p>This website has two main goals.</p>
+               <p>First, it provides a practical study guide for people preparing for the Adobe Certified Professional - Site Developer (AD0-E128) certification. It explains how to use NotebookLM as a support tool to better understand the official documentation and practice exam-style questions.</p>
+               <p>Second, this website is intentionally designed as an example of an accessible web page. All content and components are built following web accessibility best practices, so visitors can explore how accessibility works in a real, functional context.</p>
+               <p> By combining both goals, this site demonstrates that accessibility is not an extra layer added at the end of a project. It is a core part of good user experience design and benefits all users, including those preparing for professional certifications.</p>
+           </div>
+        </section>
+        <!-- Section 2: What is NotebookLM -->
+       <section class="section" id="notebooklm">
+          <h2 class="section__title">What Is NotebookLM?</h2>
+           <div class="section__intro">
+               <p><strong>NotebookLM</strong> is an AI-powered research and learning tool that helps you work with your own source materials. Instead of generating generic answers, it bases its responses strictly on the documents you provide.</p>
+               <p>For exam preparation, this makes NotebookLM especially useful. You can upload official technical documentation and then ask questions or generate practice content that stays aligned with the actual exam scope.</p>
+           </div>
+          <!-- Informative image -->
+          <figure>
+            <img id="informative-image" src="img/interface01.png" alt="NotebookLM interface" />
+            <figcaption></figcaption>
+          </figure>
+          <!-- Key features accordion -->
+            <div class="section section__sublevel">
+            <h3 id="accordion-native">Key Features for Exam Preparation</h3>
+            <ul class="accordion">
+                <li class="accordion__item">
+                    <details class="accordion__details">
+                    <summary class="accordion__summary">
+                        Source-based answers
+                    </summary>
+                    <div class="accordion__info">
+                        <p>
+                        NotebookLM only uses the documents you upload, which helps avoid incorrect or out-of-scope information.
+                        </p>
+                    </div>
+                    </details>
+                </li>
 
-    <!-- Section with form -->
-    <section>
-      <h2>Contact form</h2>
-      <p>
-        Please fill out the form below to get in touch with us.
-      </p>
+                <li class="accordion__item">
+                    <details class="accordion__details">
+                    <summary class="accordion__summary">
+                        Question and quiz generation
+                    </summary>
+                    <div class="accordion__info">
+                        <p>
+                        You can generate practice questions based on real documentation, including scenario-based and multiple-choice questions.
+                        </p>
+                    </div>
+                    </details>
+                </li>
 
-      <!-- Form -->
-      <form action="#" method="post">
+                <li class="accordion__item">
+                    <details class="accordion__details">
+                    <summary class="accordion__summary">
+                        Summaries and explanations
+                    </summary>
+                    <div class="accordion__info">
+                        <p>
+                        Complex sections of technical documentation can be summarized in clear, structured language.
+                        </p>
+                    </div>
+                    </details>
+                </li>
 
-        <!-- Text input -->
-        <div>
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            aria-required="true"
-          />
-        </div>
+                <li class="accordion__item">
+                    <details class="accordion__details">
+                    <summary class="accordion__summary">
+                        Multiple document support
+                    </summary>
+                    <div class="accordion__info">
+                        <p>
+                        As you study more topics, you can group several documents together to reinforce connections between related concepts.
+                        </p>
+                    </div>
+                    </details>
+                </li>
+                </ul>
 
-        <!-- Email input -->
-        <div>
-          <label for="email">Email address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            aria-describedby="email-help"
-          />
-          <p id="email-help">
-            We will only use your email address to reply to your message.
-          </p>
-        </div>
+            </div>
 
-        <!-- Radio buttons -->
-        <fieldset>
-          <legend>Reason for contact</legend>
-
-          <div>
-            <input type="radio" id="support" name="reason" value="support" />
-            <label for="support">Support</label>
+          <div>Used correctly, NotebookLM acts as a study assistant that helps you test your understanding, identify knowledge gaps, and practice in a format similar to the AD0-E128 exam—without replacing the official documentation as the primary source of truth.</div>
+        </section>
+        <!-- Section 3: Study workflow -->
+       <section class="section" id="workflow">
+          <h2 class="section__title"  id="accordion-js">Study Workflow Using NotebookLM</h2>
+          <div class="section__intro">
+              <p>This section describes a practical workflow to prepare for the AD0-E128 certification exam by combining official resources with targeted practice and AI-assisted review.</p>
+              <p>The goal of this workflow is to reinforce understanding, recognize common exam patterns, and identify knowledge gaps early.</p>
           </div>
+          <!-- Steps (collapsible/accordion exclusives) -->
+          <div class="accordion" id="workflow-accordion">
+            <div class="accordion__item">
+                <button class="accordion__header" 
+                        aria-expanded="false" 
+                        aria-controls="workflow-panel1" 
+                        id="workflow-btn1">
+                        Step 1: Complete the course and quizzes (optional)
+                    </button>
+                <div id="workflow-panel1" 
+                    role="region" 
+                    aria-labelledby="workflow-btn1" 
+                    class="accordion__panel" 
+                    aria-hidden="true">
+                <p>Start by completing the official course and its built-in quizzes. This step is especially useful if you are new to some of the technical concepts or have limited backend experience. If you already feel comfortable with the basics or have limited study time, you may choose to skip this step and focus directly on the official technical documentation.</p>
+                </div>
+            </div>
 
-          <div>
-            <input type="radio" id="sales" name="reason" value="sales" />
-            <label for="sales">Sales</label>
-          </div>
-        </fieldset>
+            <div class="accordion__item">
+                <button class="accordion__header" 
+                        aria-expanded="false" 
+                        aria-controls="workflow-panel2" 
+                        id="workflow-btn2">
+                        Step 2: Practice with the Question Pool app
+                    </button>
+                <div id="workflow-panel2" 
+                    role="region" 
+                    aria-labelledby="workflow-btn2" 
+                    class="accordion__panel" 
+                    aria-hidden="true" >
+                <p>In parallel with the course, practice regularly with the data123 and data128 tests in the Question Pool app. This app provides a large number of questions that closely match the style of the certification exam. Regular practice helps you become familiar with how questions are phrased and what details are commonly tested.</p>
+                </div>
+            </div>
 
-        <!-- Checkbox -->
+            <div class="accordion__item">
+                <button class="accordion__header" 
+                        aria-expanded="false" 
+                        aria-controls="workflow-panel3" 
+                        id="workflow-btn3">
+                        Step 3: Study the official technical documentation
+                    </button>
+                <div id="workflow-panel3" 
+                    role="region" 
+                    aria-labelledby="workflow-btn3" 
+                    class="accordion__panel" 
+                    aria-hidden="true">
+                <p>The official technical documentation is the primary source for the exam and should be studied carefully. As you read the documentation, you may recognize concepts or scenarios from questions you encountered in the Question Pool app. This helps place those questions in context and makes them easier to recognize even if they are phrased differently in the exam.</p>
+                </div>
+            </div>
+
+            <div class="accordion__item">
+                <button class="accordion__header" 
+                        aria-expanded="false" 
+                        aria-controls="workflow-panel4" 
+                        id="workflow-btn4">
+                        Step 4: Generate practice quizzes using NotebookLM
+                    </button>
+                <div id="workflow-panel4" 
+                    role="region" 
+                    aria-labelledby="workflow-btn4" 
+                    class="accordion__panel accordion__panel--xl" 
+                    aria-hidden="true">
+                <p>NotebookLM can be used to create exam-style practice quizzes based strictly on the official documentation. Upload a technical page to NotebookLM and ask it to generate scenario-based, multiple-choice questions. These quizzes help you verify whether you truly understand the material and highlight areas that need further review.</p>            
+                </div>
+                
+            </div>
+
+            <div class="accordion__item">
+                <button class="accordion__header" 
+                        aria-expanded="false" 
+                        aria-controls="workflow-panel5" 
+                        id="workflow-btn5">
+                        Step 5: Combine multiple documents over time
+                    </button>
+                <div id="workflow-panel5" 
+                    role="region" 
+                    aria-labelledby="workflow-btn5" 
+                    class="accordion__panel" 
+                    aria-hidden="true" >
+                <p>As you continue studying, add more technical documents to NotebookLM and generate quizzes that combine multiple sources. This helps reinforce relationships between related topics and supports broader exam preparation, closer to real exam conditions.</p>
+                </div>
+            </div>
+            </div>  
+            
+                            
+                      <!-- Tabs component -->
+          <div class="tabs" id="tabs">
+                <p>You can generate quizzes using:</p>
+
+                <!-- Tab list -->
+                <div class="tabs__list" role="tablist" aria-label="Quiz generation methods">
+                    <button
+                    class="tabs__button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="tab-chat"
+                    id="tab-btn-chat">
+                    Chat
+                    </button>
+
+                    <button
+                    class="tabs__button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab-quiz"
+                    id="tab-btn-quiz">
+                    Quiz button
+                    </button>
+                </div>
+
+                <!-- Tab panels -->
+                <div
+                    class="tabs__panel"
+                    role="tabpanel"
+                    id="tab-chat"
+                    aria-labelledby="tab-btn-chat"
+                    tabindex="0">
+                    <h4>Steps to generate the quiz using the Chat section:</h4>
+                    <ol>
+                        <li>
+                            <p>Add the source (website link or document) and keep it selected.</p>
+                            <img src="img/interface02.png" alt="NotebookLM interface with Add Sources button, selected source and chat input highlighted">
+                        </li>
+                        <li><p>Type or paste the 
+                            <button
+                                class="button--inline modal-trigger"
+                                aria-haspopup="dialog"
+                                aria-controls="prompt-modal">
+                                following prompt
+                                </button> 
+                                in the Chat input</p></li>
+                    </ol>                    
+                </div>
+
+                <div
+                    class="tabs__panel"
+                    role="tabpanel"
+                    id="tab-quiz"
+                    aria-labelledby="tab-btn-quiz"
+                    tabindex="0"
+                    hidden>
+                    <h4>Steps to generate the quiz using the Quiz button:</h4>
+                    <ol>
+                        <li>
+                            <p>Click the edit icon on the Quiz button.</p>
+                            <img src="img/interface03.png" alt="NotebookLM interface with Quizz setup button highlighted">
+                        </li>
+                        <li>
+                            <p>Set your preferences (Number of Questions, Level of Difficulty) and paste the prompt in the input field (omit the formatting instructions, as Studio handles that automatically).</p>
+                            <img src="img/modal01.png" alt="NotebookLM modal">
+                        </li>
+                    </ol>
+                    
+                </div>
+
+                <!-- Modal -->
+                 <div class="modal"
+                    id="prompt-modal"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="prompt-title"
+                    tabindex="-1"
+                    hidden>
+
+                    <div class="modal__overlay" data-close></div>
+
+                    <div class="modal__content" role="document">
+                        <div class="modal__header">
+                            <h2 id="prompt-title">NotebookLM Quiz Prompt</h2>
+                            <button class="modal__close" data-close>
+                        Close
+                        </button>
+                        </div>
+
+                        <pre class="modal__prompt">
+Generate a practice quiz based strictly on the uploaded technical documentation.
+The quiz should follow the style of the AD0-E128 certification exam:
+
+- Focus on technical, scenario-based questions.
+- Use multiple-choice questions with one or more correct answers.
+- Clearly indicate how many answers are correct.
+- Avoid purely theoretical or definition-only questions.
+- Base each question on real configuration details, behaviors, limitations, or best practices described in the documentation.
+- Include tricky but realistic distractors that reflect common misunderstandings.
+
+Format the output as follows (use this full format when entering the prompt in the CHAT section):
+
+- First, list all questions only (numbered), without answers or explanations.
+- After all questions, include a separate section titled “Answers and Explanations”.
+- For each question in the answers section:
+    a. Provide the correct answer(s), each option on a separate line (A, B, C, D, etc.).
+    b. Briefly explain why each correct option is valid, referencing the relevant part of the documentation.
+
+Generate 10 questions.
+                        </pre>
+
+                        
+                    </div>
+                    </div>
+            </div>
+
+        </section>
+       
+        <!-- Section 4: Accessible components showcase -->
+       <section class="section" id="components">
+          <h2>Accessible Web Components</h2>
+          <div class="section__intro">This section showcases common web components implemented with accessibility in mind. Each example is functional and follows established accessibility patterns.</div>
+          <!-- Landmarks example -->
+         <section class="section section__sublevel">
+            <h3>Page Layout and Landmarks</h3>
+            <div>
+                <p>The page uses semantic HTML elements to define clear regions, such as header, navigation, main content, complementary content, and footer.</p>
+                <p>These landmarks help assistive technologies understand the structure of the page and allow users to navigate efficiently.</p>
+            </div>
+          </section>
+          <!-- Images example -->
+         <section class="section section__sublevel">
+            <h3>Images</h3>
+            <div>
+                <p>Two types of images are demonstrated:</p>
+                <ul class="section__list">
+                    <li class="section__item">Decorative images, which are ignored by assistive technologies</li>
+                    <li class="section__item">Informative images, which include meaningful alternative text</li>
+                </ul>
+                <p>This ensures that images support the content without creating unnecessary noise for screen reader users.</p>
+
+                <!-- Jump buttons -->
+                <div class="jump-buttons">
+                    <a href="#decorative-image" class="button--inline">See decorative image</a>
+                    <a href="#informative-image" class="button--inline">See informative image</a>
+                </div>
+            </div>
+          </section>
+          <!-- Tabs example -->
+         <section class="section section__sublevel">
+            <h3>Tabs</h3>
+            <div>
+                <p>The tabs component allows users to switch between related content without leaving the page.</p>
+                <p>The component:</p>
+                <ul class="section__list">
+                    <li class="section__item">Is fully keyboard navigable</li>
+                    <li class="section__item">Uses appropriate ARIA roles</li>
+                    <li class="section__item">Clearly indicates which tab is active</li>
+                </ul>
+
+                 <!-- Jump buttons -->
+                <div class="jump-buttons">
+                    <a href="#tabs" class="button--inline">See tabs</a>
+                </div>
+            </div>
+          </section>
+          <!-- Accordion example -->
+         <section class="section section__sublevel">
+            <h3>Accordion</h3>
+             <div>
+                <p>This section demonstrates two types of accordion components: a native HTML <code>&lt;details&gt;/&lt;summary&gt;</code> accordion, and a JavaScript-controlled collapsible accordion. Both allow content sections to expand and collapse accessibly.</p>
+            </div>
+
+             <!-- Jump buttons -->
+                <div class="jump-buttons">
+                    <a href="#accordion-native" class="button--inline">See Native Accordion</a>
+                    <a href="#accordion-js" class="button--inline">See JS Accordion</a>
+                </div>
+          </section>
+
+            <!-- Modal example (hidden by default) -->
+         <section class="section section__sublevel">
+            <h3>Modal Dialog</h3>
+            <div>
+                <p>The modal dialog example demonstrates proper focus management.</p>
+                <p>When the modal opens:</p>
+                <ul class="section__list">
+                    <li class="section__item">Focus moves into the dialog</li>
+                    <li class="section__item">Keyboard focus is trapped inside the dialog</li>
+                    <li class="section__item">The Escape key closes the modal</li>
+                    <li class="section__item">Focus returns to the triggering element when the modal closes</li>
+                </ul>
+            </div>
+            <button type="button" class="button--inline modal-trigger">Open modal</button>            
+          </section>
+
+          <!-- Form example -->
+         <section class="section section__sublevel">
+            <h3>Form</h3>
+            <div>
+                <p>The form example demonstrates accessible form design, including:</p>
+                <ul class="section__list">
+                    <li class="section__item">Explicit labels for all form fields</li>
+                    <li class="section__item">Grouping related fields using fieldsets and legends</li>
+                    <li class="section__item">Clear instructions and error handling</li>
+                </ul>
+                <p>The form can be completed using only a keyboard or assistive technology.</p>
+            </div>
+            <form>
+                <fieldset>
+                    <legend>Example Form</legend>
+
+                    <!-- Required text input -->
+                    <label class="textfield__label" for="name">Full Name <span aria-hidden="true">*</span></label>
+                    <input class="textfield__input" type="text" id="name" name="name" required aria-describedby="name-hint">
+                    <p class="textfield__hint" id="name-hint">Enter your full name as it appears on official documents.</p>
+
+                    <!-- Optional email input -->
+                    <label class="textfield__label" for="email">Email</label>
+                    <input class="textfield__input" type="email" id="email" name="email" aria-describedby="email-hint">
+                    <p class="textfield__hint" id="email-hint">Optional, we will use this to send updates.</p>
+
+                    <!-- Required number input -->
+                    <label class="textfield__label" for="age">Age <span aria-hidden="true">*</span></label>
+                    <input class="textfield__input" type="number" id="age" name="age" required min="0" max="120" aria-describedby="age-hint">
+                    <p class="textfield__hint" id="age-hint">Enter your age (0-120).</p>
+
+                    <!-- Checkbox group (optional) -->
+                  <fieldset>
+                        <legend class="legend--secondary">Preferred Contact Methods (optional)</legend>
+                        <div id="contact-hint" class="textfield__hint">
+                            You can select more than one.
+                        </div>
+
+                        <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="contact" value="email"
+                                aria-describedby="contact-hint"> Email
+                        </label>
+                        <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="contact" value="phone"
+                                aria-describedby="contact-hint"> Phone
+                        </label>
+                        <label class="checkbox__label">
+                            <input class="checkbox__input" type="checkbox" name="contact" value="sms"
+                                aria-describedby="contact-hint"> SMS
+                        </label>
+                    </fieldset>
+
+
+                    <!-- Radio button group (required) -->
+                   <fieldset>
+                        <legend class="legend--secondary">Subscription Plan <span aria-hidden="true">*</span></legend>
+                        <div id="plan-hint" class="textfield__hint">
+                            Choose one of the available subscription plans.
+                        </div>
+
+                        <label class="radio__label">
+                            <input class="radio__input" type="radio" name="plan" value="basic" required
+                                aria-describedby="plan-hint"> Basic
+                        </label>
+                        <label class="radio__label">
+                            <input class="radio__input" type="radio" name="plan" value="pro"
+                                aria-describedby="plan-hint"> Pro
+                        </label>
+                        <label class="radio__label">
+                            <input class="radio__input" type="radio" name="plan" value="enterprise"
+                                aria-describedby="plan-hint"> Enterprise
+                        </label>
+                    </fieldset>
+
+
+                    <!-- Textarea (optional) -->
+                    <label class="textfield__label" for="comments">Comments</label>
+                    <textarea class="textarea" id="comments" name="comments" rows="4" aria-describedby="comments-hint"></textarea>
+                    <p class="textfield__hint" id="comments-hint">Optional: Write any additional notes or questions.</p>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="button--primary form__button">Submit</button>
+                </fieldset>
+                </form>
+
+
+          </section>
+        
+        </section>      
+      </div>  
+      
+      <!-- ASIDE -->
+   <aside class="aside">
+        <h2 class="aside__title">Study and Accessibility Notes</h2>
+
         <div>
-          <input type="checkbox" id="newsletter" name="newsletter" />
-          <label for="newsletter">
-            I want to receive the newsletter
-          </label>
+            <p>This complementary section provides additional context without interrupting the main content.</p>
+            <p>It may include:</p>
+            <ul class="section__list">
+                <li class="section__item">Study tips for the AD0-E128 exam</li>
+                <li class="section__item">Suggestions for using keyboard navigation</li>
+                <li class="section__item">Notes for users exploring accessibility features</li>
+            </ul>
         </div>
+        
+        <hr class="separator">
 
-        <!-- Select -->
-        <div>
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="">Select a country</option>
-            <option value="us">United States</option>
-            <option value="uk">United Kingdom</option>
-            <option value="es">Spain</option>
-          </select>
-        </div>
+        <h3 class="aside__subtitle">Accessible Web Components</h3>
+        <p>The following links provide quick access to examples of accessible web components demonstrated in this page.</p>
 
-        <!-- Submit button -->
-        <div>
-          <button type="submit">
-            Submit form
-          </button>
-        </div>
-
-      </form>
-    </section>
+        <nav aria-label="Quick links to accessible components" class="aside__nav">
+            <ul class="aside__list">
+                <li class="aside__item">
+                    <a href="#decorative-image" class="button--inline">Decorative Image</a>
+                </li>
+                <li class="aside__item">
+                    <a href="#informative-image" class="button--inline">Informative Image</a>
+                </li>
+                <li class="aside__item">
+                    <a href="#tabs" class="button--inline">Tabs</a>
+                </li>
+                <li class="aside__item">
+                    <a href="#accordion-native" class="button--inline">Native Accordion</a>
+                </li>
+                <li class="aside__item">
+                    <a href="#accordion-js" class="button--inline">JS Accordion</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
   </main>
 
   <!-- Complementary content -->
-  <aside>
-    <h2>Additional information</h2>
-    <p>
-      Customer support hours: Monday to Friday, 9 AM to 6 PM.
-    </p>
-  </aside>
 
-  <!-- Footer / Contentinfo -->
-  <footer>
-    <p>&copy; 2026 My Accessible Website</p>
 
-    <nav aria-label="Legal navigation">
-      <ul>
-        <li><a href="/privacy">Privacy policy</a></li>
-        <li><a href="/cookies">Cookies</a></li>
-      </ul>
-    </nav>
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__text">This project was created as a combined study guide and accessibility demonstration.</p>
+    <p class="footer__text">It references the Adobe Certified Professional – UX Designer (AD0-E128) certification and highlights the importance of building inclusive, accessible digital experiences as part of professional UX practice.</p>
   </footer>
 
 </body>
