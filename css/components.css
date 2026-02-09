@@ -79,7 +79,6 @@
   width: 100%;
   text-align: left;
   font-weight: 600;
-  background: var(--color-accent-soft);
   color: var(--color-accent);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -95,9 +94,7 @@
 
     &:focus,
     &:hover {
-        outline: 2px solid var(--color-accent);
-        background-color: var(--color-accent);
-        color: white  ;
+        background-color: var(--color-accent-soft);
     }
 }
 
