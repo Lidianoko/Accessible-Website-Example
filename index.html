@@ -49,11 +49,11 @@
            <div class="section__intro">
                <p>This website has two main goals.</p>
                <div class="highlited-container">
-                   <span class="highlighted__number">1</span>
+                   <span class="highlighted__number" aria-hidden="true">1</span>
                    <p>First, it provides a practical study guide for people preparing for the Adobe Certified Professional - Site Developer (AD0-E128) certification. It explains how to use NotebookLM as a support tool to better understand the official documentation and practice exam-style questions.</p>
                </div>
                <div class="highlited-container">
-                   <span class="highlighted__number">2</span>
+                   <span class="highlighted__number" aria-hidden="true">2</span>
                    <p>Second, this website is intentionally designed as an example of an accessible web page. All content and components are built following web accessibility best practices, so visitors can explore how accessibility works in a real, functional context.</p>
                </div>
                <p> By combining both goals, this site demonstrates that accessibility is not an extra layer added at the end of a project. It is a core part of good user experience design that benefits all users.</p>
@@ -549,6 +549,37 @@ Generate 10 questions.
                 </li>
             </ul>
         </nav>
+
+        <hr class="separator">
+
+
+        <h3 class="aside__subtitle">Testing with VoiceOver (macOS)</h3>
+        <p>
+        The following steps outline a basic approach to testing this page using the VoiceOver screen reader on macOS.
+        This helps verify that content structure, navigation, and interactive components are accessible.
+        </p>
+
+        <ol class="aside__list aside__list--ordered">
+        <li class="aside__item">
+            Enable VoiceOver using <kbd>Cmd</kbd> + <kbd>F5</kbd> (or <kbd>Fn</kbd> + <kbd>Cmd</kbd> + <kbd>F5</kbd> on some keyboards).
+        </li>
+        <li class="aside__item">
+            Use <kbd>Ctrl</kbd> + <kbd>Option</kbd> (VoiceOver modifier) together with arrow keys to navigate through headings, links, and landmarks.
+        </li>
+        <li class="aside__item">
+            Navigate by headings using <kbd>Ctrl</kbd> + <kbd>Option</kbd> + <kbd>Cmd</kbd> + <kbd>H</kbd> to verify the page structure.
+        </li>
+        <li class="aside__item">
+            Use the Rotor (<kbd>Ctrl</kbd> + <kbd>Option</kbd> + <kbd>U</kbd>) to explore landmarks, links, form controls, and headings.
+        </li>
+        <li class="aside__item">
+            Interact with components such as tabs, accordions, and modals using the keyboard only, confirming that focus moves correctly and state changes are announced.
+        </li>
+        <li class="aside__item">
+            When finished, disable VoiceOver using <kbd>Cmd</kbd> + <kbd>F5</kbd>.
+        </li>
+        </ol>
+
     </aside>
 
   </main>
