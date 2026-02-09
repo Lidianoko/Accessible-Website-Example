@@ -280,6 +280,16 @@ margin: 0.5rem 0;}
   display: block;
 }
 
+.section__featured {
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.section__icon {
+  font-size: 2.2rem;
+}
+
 /* =========================
    FIGURE
    ========================= */
@@ -292,21 +302,6 @@ figcaption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: var(--color-muted);
-}
-
-/* =========================
-   HIGHLIGHTED
-   ========================= */
-
-.highlited-container {
-  display: flex;
-  gap: 1rem;
-  margin-block: 1rem;
-}
-
-.highlighted__number {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 /* =========================
