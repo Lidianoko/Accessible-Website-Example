@@ -172,7 +172,7 @@ button {
   list-style: none;
   padding-left: 1rem;
   align-items: stretch;
-  height: 3rem;
+    height: 3rem;
 }
 
 .nav__item {
@@ -247,6 +247,10 @@ button {
   margin-bottom: 1rem;
 }
 
+.section__sublevel {
+  margin-bottom: 1rem;
+}
+
 .section__sublevel h3 {
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
@@ -286,6 +290,22 @@ figcaption {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: var(--color-muted);
+}
+
+/* =========================
+   HIGHLIGHTED
+   ========================= */
+
+.highlited-container {
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.highlighted__number {
+  font-size: 3rem;
+  color: var(--color-accent-soft);
+  line-height: 1;
 }
 
 /* =========================
