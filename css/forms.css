@@ -1,0 +1,123 @@
+/* =========================
+   FORM BASE
+   ========================= */
+
+form {
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: var(--gap);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset fieldset {
+    margin-bottom: 1rem;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.legend--secondary{
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+/* =========================
+   TEXTFIELDS
+   ========================= */
+
+.textfield__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.textfield__input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font-base);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* Hints */
+.textfield__hint {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* Required indicator (asterisk) */
+.textfield__label span[aria-hidden="true"] {
+  color: var(--color-accent);
+  margin-left: 0.25rem;
+}
+
+/* =========================
+   CHECKBOXES & RADIOS
+   ========================= */
+
+.checkbox__label,
+.radio__label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.checkbox__input,
+.radio__input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-accent);
+}
+
+/* Group hints */
+fieldset > .textfield__hint {
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   SUBMIT BUTTON
+   ========================= */
+
+.button--primary,
+.form__button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: 1rem;
+}
+
+.button
