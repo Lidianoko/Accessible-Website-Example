@@ -1,0 +1,483 @@
+/* =========================
+   CSS RESET (light)
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4,
+p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   CSS VARIABLES
+   ========================= */
+
+:root {
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text: #1f2933;
+  --color-muted: #4b5563;
+  --color-border: #e5e7eb;
+  --color-accent: #1846c1;
+  --color-accent-soft: #dbeafe;
+  --color-contrast: #f59e0b;
+
+  --font-base: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --line-height: 1.6;
+  --radius: 6px;
+  --max-width: 72rem;
+  --gap: 2rem;
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+
+body {
+  font-family: var(--font-base);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+li + li {
+  margin-top: 0.5rem;
+}
+
+[hidden] {
+  display: none;
+}
+
+button {
+  font-size: 1rem;
+}
+
+.separator {
+  margin: 2rem 0;
+  height: 1px;
+  background-color: var(--color-muted);
+  border: none;
+}
+
+
+/* =========================
+   SKIP LINK
+   ========================= */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background: var(--color-accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+  width: 100%;
+  max-width: var(--max-width);
+  height: 20rem;
+  border-bottom: 1px solid var(--color-border);
+  padding: 8rem 1rem 2rem;
+  position: relative;
+}
+
+.header__decorative-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.header__title,
+.header__tagline,
+.header__author {
+  position: relative;
+  z-index: 1;
+}
+
+.header__title {
+  font-size: 2rem;
+}
+
+.header__tagline {
+  margin-top: 0.5rem;
+  color: var(--color-muted);
+}
+
+.header__author {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.nav {
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--color-text);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  /* padding: 1rem; */
+  align-items: stretch;
+    height: 3rem;
+}
+
+.nav__item {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  padding: 0 0.75rem;
+  color: var(--color-surface);
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.nav__link:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+
+/* =========================
+   MAIN LAYOUT (Flex)
+   ========================= */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--gap);
+  width: 100%;
+  max-width: var(--max-width);
+  padding-block: 2rem;
+}
+
+.main > .section {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+.aside {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.section + .section {
+  margin-top: 2rem;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section__sublevel h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.section__sublevel h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section__intro {
+  margin-bottom: 1rem;
+}
+
+.section__list {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+}
+
+.section__item {
+margin: 0.5rem 0;}
+
+.section__item span {
+  font-weight: 600;
+  display: block;
+}
+
+/* =========================
+   FIGURE
+   ========================= */
+
+figure {
+  margin: 1.5rem 0;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button--primary {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: #1d4ed8;
+}
+
+
+.button--inline {
+  appearance: none;
+  background: transparent;
+  color: var(--color-accent);
+  border: 0;
+  border-bottom: 2px solid var(--color-accent);
+  padding: 0;
+  font-weight: 600;
+  cursor: pointer;
+
+   &:hover,
+   &:focus-visible {
+    background-color: var(--color-accent-soft);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline-offset: 2px;
+  }
+}
+
+.jump-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   ASIDE
+   ========================= */
+
+.aside {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.aside__title,
+.aside__subtitle {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.aside__title {
+  font-size: 1.25rem;
+}
+
+.aside__subtitle {
+  font-size: 1.1rem;
+}
+
+.aside__list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.aside__link {
+  display: inline-block;
+  margin: 0.25rem 0;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.aside__link:hover,
+.aside__link:focus {
+  background-color: var(--color-accent-soft);
+  color: var(--color-text);
+  outline: 2px solid var(--color-contrast);
+  outline-offset: 2px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  width: 100%;
+  max-width: var(--max-width);
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 1rem;
+  color: var(--color-muted);
+  margin-top: var(--gap);
+}
+
+.footer__text + .footer__text {
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   MEDIA QUERIES (MOBILE)
+   ========================= */
+
+@media (max-width: 768px) {
+   
+/* Header */
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+  }
+
+  .header__tagline {
+    font-size: 0.9rem;
+  }
+
+  /* Navigation */
+  .nav__list {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .nav__link {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* Main layout: stack sections and aside */
+  .main {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-block: 1.5rem;
+  }
+
+  .main > .section {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .aside {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  /* Section titles smaller */
+  .section__title {
+    font-size: 1.25rem;
+  }
+
+  .section__sublevel h3 {
+    font-size: 1.1rem;
+  }
+
+  .section__sublevel h4 {
+    font-size: 0.95rem;
+  }
+
+  /* Aside */
+  .aside {
+    padding: 1rem;
+  }
+
+  .aside h2 {
+    font-size: 1.1rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer__text {
+    font-size: 0.85rem;
+  }
+}
